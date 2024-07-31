@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Constrained Beam Search Visualization
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+這個專案提供了一個交互式的可視化工具，用於展示約束波束搜索（Constrained Beam Search）算法在機器翻譯中的應用。它旨在幫助學習者和研究者更好地理解這一複雜的自然語言處理技術。
 
-## Available Scripts
+<!-- ![Constrained Beam Search Visualization Demo](https://your-demo-gif-url.gif) -->
 
-In the project directory, you can run:
+## 目錄
 
-### `npm start`
+- [專案簡介](#專案簡介)
+- [安裝指南](#安裝指南)
+- [使用說明](#使用說明)
+- [技術細節](#技術細節)
+- [貢獻指南](#貢獻指南)
+- [許可證](#許可證)
+- [相關資源](#相關資源)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 專案簡介
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+約束波束搜索是一種改進的波束搜索算法，在保持高效搜索的同時，還能滿足特定的約束條件。這個可視化工具展示了算法如何在翻譯"我喜歡吃蘋果"這個中文句子到英文的過程中，確保翻譯結果包含"delicious"這個詞。
 
-### `npm test`
+主要特點：
+- 交互式步驟展示
+- 清晰的樹狀結構可視化
+- 概率和約束滿足情況的實時顯示
+- 自動播放功能
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 安裝指南
 
-### `npm run build`
+1. 克隆儲存庫：
+   ```
+   git clone https://github.com/your-username/constrained-beam-search-visualization.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. 進入專案目錄：
+   ```
+   cd constrained-beam-search-visualization
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. 安裝依賴：
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. 啟動開發服務器：
+   ```
+   npm start
+   ```
 
-### `npm run eject`
+5. 在瀏覽器中打開 `http://localhost:3000` 查看專案。
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 使用說明
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. 打開應用後，您會看到一個初始的搜索樹結構。
+2. 使用 "Next" 和 "Previous" 按鈕逐步查看搜索過程。
+3. 點擊 "Auto Play" 自動播放整個過程。
+4. "Reset" 按鈕可以重置整個演示。
+5. 觀察每個節點的概率和是否滿足約束條件（包含 "delicious" 詞）。
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 技術細節
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- 前端框架：React
+- 狀態管理：React Hooks (useState, useEffect)
+- 樣式：內聯 CSS
+- 部署：GitHub Pages
 
-## Learn More
+核心算法實現在 `ConstrainedBeamSearchVisualization.js` 文件中，包括：
+- 樹狀結構的遞歸渲染
+- 步驟控制邏輯
+- 約束條件檢查
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 貢獻指南
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+我們歡迎任何形式的貢獻！如果您想為這個專案做出貢獻，請遵循以下步驟：
 
-### Code Splitting
+1. Fork 這個儲存庫
+2. 創建您的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打開一個 Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 許可證
 
-### Analyzing the Bundle Size
+本專案採用 MIT 許可證 - 查看 [LICENSE.md](LICENSE.md) 文件了解詳情
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 相關資源
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [波束搜索算法介紹](https://en.wikipedia.org/wiki/Beam_search)
+- [機器翻譯中的約束解碼](https://aclanthology.org/P16-1162.pdf)
+- [React 官方文檔](https://reactjs.org/docs/getting-started.html)
